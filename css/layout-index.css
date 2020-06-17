@@ -1,0 +1,29 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  height: 85px;
+  width: 100%;
+  background-color: red;
+  flex: none;
+}
+main {
+  height: 537px;
+  width: 100%;
+  flex: 1 0 auto;
+  background-color: salmon;
+}
+footer {
+  height: 146px;
+  width: 100%;
+  background-color: silver;
+  flex: 1 0 auto;
+}
