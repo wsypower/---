@@ -154,6 +154,20 @@ header .header-layout-left {
   align-items: center;
   padding-left: 15px;
   box-sizing: border-box;
+  flex-direction: row;
+}
+/* ~~~~~~~~~~~~~~~ 子项目头部表题 ~~~~~~~~~~~~~~~ */
+.sub__project--item .project--item-header .project--item-header-title {
+  flex: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+/* ~~~~~~~~~~~~~~~ 子项目头部装饰 ~~~~~~~~~~~~~~~ */
+.sub__project--item .project--item-header .project--item-header-icon {
+  flex: none;
+  height: 100%;
+  width: 87px;
 }
 .sub__project--item .project--item-main {
   width: 100%;
