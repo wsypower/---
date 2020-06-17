@@ -1,0 +1,173 @@
+/* ##################################################################### */
+/* ############################### header ############################## */
+/* ##################################################################### */
+/* ~~~~~~~~~~~~~~~~ title ~~~~~~~~~~~~~~~~ */
+header .header-layout-center {
+  font-family: title;
+  color: #dae5f9;
+  text-shadow: 0px 0px 11px #8185f4;
+  font-size: 36px;
+  letter-spacing: 7px;
+  cursor: pointer;
+}
+
+/* ~~~~~~~~~~~~~~~~~~ 时间 ~~~~~~~~~~~~~~~~~ */
+header .header-layout-left {
+  position: relative;
+}
+header .header-layout-left .timer {
+  position: absolute;
+  right: 201px;
+  bottom: 18px;
+  height: 22px;
+  color: #3460d2;
+  font-size: 16px;
+  transform: rotate(3.5deg);
+  -webkit-transform: rotate(3.5deg);
+  -moz-transform: rotate(3.5deg);
+  -ms-transform: rotate(3.5deg);
+  -o-transform: rotate(3.5deg);
+}
+.header-layout-left .timer span {
+  margin-right: 4px;
+}
+.header-layout-left .timer span:nth-last-child(1) {
+  margin-right: 0px;
+}
+/* ~~~~~~~~~~~~~~~~~~ 天气 ~~~~~~~~~~~~~~~~~ */
+header .header-layout-right {
+  position: relative;
+}
+header .header-layout-right .weather {
+  position: absolute;
+  left: 201px;
+  bottom: 18px;
+  height: 22px;
+  color: #3460d2;
+  font-size: 16px;
+  transform: rotate(-3.5deg);
+  -webkit-transform: rotate(-3.5deg);
+  -moz-transform: rotate(-3.5deg);
+  -ms-transform: rotate(-3.5deg);
+  -o-transform: rotate(-3.5deg);
+}
+.header-layout-right .weather span {
+  margin-right: 4px;
+}
+/* ##################################################################### */
+/* ################################ main ############################### */
+/* ##################################################################### */
+header .header-layout-left {
+  box-sizing: content-box;
+  height: 100%;
+  display: flex;
+  flex: auto;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+/* ====================================================== */
+/* ====================== main-left ===================== */
+/* ====================================================== */
+.main-layout-left .main-left-content {
+  width: 374px;
+  height: 535px;
+  background: url("../images/main-left-bc.png") no-repeat center;
+  background-size: contain;
+  position: relative;
+  top: -7px;
+  padding: 36px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  perspective: 300px;
+  padding-left: 10px;
+}
+/* ====================================================== */
+/* ===================== main-right ===================== */
+/* ====================================================== */
+.main-layout-right .main-right-content {
+  width: 374px;
+  height: 535px;
+  background: url("../images/main-right-bc.png") no-repeat center;
+  background-size: contain;
+  position: relative;
+  top: -7px;
+  padding: 36px 0px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  perspective: 300px;
+  padding-right: 10px;
+}
+
+/* ====================================================== */
+/* ======================= 四个主功能样式 ====================== */
+/* ====================================================== */
+.project-item {
+  width: 310px;
+  height: 222px;
+  cursor: pointer;
+}
+/* ~~~~~~~~~~~~~~~~~ 左侧样式 ~~~~~~~~~~~~~~~~ */
+.project-left {
+  background: url("../images/main-iten-bc.png") no-repeat;
+  transform-origin: left;
+  transform: rotateY(3deg);
+  -webkit-transform: rotateY(3deg);
+  -moz-transform: rotateY(3deg);
+  -ms-transform: rotateY(3deg);
+  -o-transform: rotateY(3deg);
+}
+/* ~~~~~~~~~~~~~~~~~ 右侧样式 ~~~~~~~~~~~~~~~~ */
+.project-right {
+  background: url("../images/main-right-item-bc.png") no-repeat;
+  transform-origin: right;
+  transform: rotateY(-3deg);
+  -webkit-transform: rotateY(-3deg);
+  -moz-transform: rotateY(-3deg);
+  -ms-transform: rotateY(-3deg);
+  -o-transform: rotateY(-3deg);
+}
+
+/* ##################################################################### */
+/* ############################### 底部次级项目 ############################## */
+/* ##################################################################### */
+.sub__project .sub__project--item {
+  width: 217px;
+  height: 141px;
+  background: url("../images/sub-item-bc.png") no-repeat top center;
+  display: flex;
+  flex-direction: column;
+}
+.sub__project--item .project--item-header {
+  width: 100%;
+  height: 35px;
+  flex: none;
+  font-family: big;
+  color: #fafafa;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.sub__project--item .project--item-main {
+  width: 100%;
+  flex: auto;
+}
+/* ##################################################################### */
+/* ################################# 字体 ################################ */
+/* ##################################################################### */
+@font-face {
+  font-family: title;
+  src: url(../font/FZZZHONGHJW.TTF);
+}
+
+@font-face {
+  font-family: big;
+  src: url(../font/big.ttf);
+}

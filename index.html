@@ -2,9 +2,9 @@
  * @Description: 
  * @Author: wsy
  * @Date: 2020-06-11 11:26:51
- * @LastEditTime: 2020-06-17 14:31:49
+ * @LastEditTime: 2020-06-17 14:46:55
  * @LastEditors: huacong
---> 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <link href="/css/normalize.css" rel="stylesheet">
@@ -14,19 +14,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>诸暨智慧城管平台</title>
     <link href="/css/layout-index.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-            
+
         <!-- head区域 star-->
         <header>
             <!-- 时间 -->
-            <div class="header-layout-left"></div>
+            <div class="header-layout-left">
+                <div class="timer">
+                    <span class="year-month">2020.06.10</span>
+                    <span class="minute">09:30</span>
+                    <span class="week">星期三</span>
+                </div>
+            </div>
             <!-- title -->
-            <div class="header-layout-center"></div>
+            <p class="header-layout-center">诸暨智慧城管平台</p>
             <!-- 天气 -->
-            <div class="header-layout-center"></div>
+            <div class="header-layout-right">
+                <div class="weather">
+                    <span>晴转多云</span>
+                    <span>23°~30°</span>
+                </div>
+            </div>
         </header>
         <!-- head区域 end-->
 
@@ -35,13 +47,25 @@
             <!--
               -- 主级菜单 ──────────────────────────────────────────────────────────  ─────
               -->
-              <div class="main__container">
+            <div class="main__container">
                 <div class="main-layout-left">
-
+                    <div class="main-left-content">
+                        <!-- 政务信访 -->
+                        <div class="project-item project-left"></div>
+                        <!-- 执法办案 -->
+                        <div class="project-item project-left"></div>
+                    </div>
                 </div>
                 <div class="main-layout-center"></div>
-                <div class="main-layout-right"></div>
-              </div>
+                <div class="main-layout-right">
+                    <div class="main-right-content ">
+                        <!-- 犬类管理 -->
+                        <div class="project-item project-right"></div>
+                        <!-- 运行指挥 -->
+                        <div class="project-item project-right"></div>
+                    </div>
+                </div>
+            </div>
         </main>
         <!-- main区域 end-->
 
@@ -53,27 +77,27 @@
             <ul class="sub__project">
                 <!-- 统计分析 -->
                 <li class="sub__project--item">
-                    <div class="project--item-header"></div>
+                    <div class="project--item-header">统计分析</div>
                     <div class="project--item-main"></div>
                 </li>
-                 <!-- 市容市貌 -->
+                <!-- 市容市貌 -->
                 <li class="sub__project--item">
-                    <div class="project--item-header"></div>
+                    <div class="project--item-header">市容市貌</div>
                     <div class="project--item-main"></div>
                 </li>
-                 <!-- 防违控违 -->
+                <!-- 防违控违 -->
                 <li class="sub__project--item">
-                    <div class="project--item-header"></div>
+                    <div class="project--item-header">防违控违</div>
                     <div class="project--item-main"></div>
                 </li>
-                 <!-- 电子账单 -->
+                <!-- 电子账单 -->
                 <li class="sub__project--item">
-                    <div class="project--item-header"></div>
+                    <div class="project--item-header">电子账单</div>
                     <div class="project--item-main"></div>
                 </li>
-                 <!-- 扬尘治理 -->
+                <!-- 扬尘治理 -->
                 <li class="sub__project--item">
-                    <div class="project--item-header"></div>
+                    <div class="project--item-header">扬尘治理</div>
                     <div class="project--item-main"></div>
                 </li>
             </ul>

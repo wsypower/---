@@ -7,7 +7,7 @@ body {
   height: 100%;
   min-height: 768px;
   min-width: 1334px;
-  background: url("../images/index-bc.png") no-repeat center;
+  background: url("../images/index-bc.png") no-repeat top center;
   background-size: cover;
 }
 .container {
@@ -26,7 +26,32 @@ header {
   display: flex;
   flex-direction: row;
   background: url("../images/header-bc.png") no-repeat top center;
-  background-size: contain;
+  justify-content: center;
+}
+/* ~~~~~~~~~~~~~~~~~~ 时间 ~~~~~~~~~~~~~~~~~ */
+header .header-layout-left {
+  box-sizing: content-box;
+  height: 100%;
+  display: flex;
+  flex: auto;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+/* ~~~~~~~~~~~~~~~~ title ~~~~~~~~~~~~~~~~ */
+header .header-layout-center {
+  width: 480px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+/* ~~~~~~~~~~~~~~~~~~ 天气 ~~~~~~~~~~~~~~~~~ */
+header .header-layout-right {
+  height: 100%;
+  display: flex;
+  flex: auto;
+  align-items: flex-end;
 }
 /* ##################################################################### */
 /* ################################ main ############################### */
@@ -54,10 +79,20 @@ main {
     width: 100%;
   }
 }
+@media screen and (min-width: 1559px) {
+  .main__container {
+    width: 1500px;
+  }
+}
 /* ---------- 左侧 ---------- */
 .main-layout-left {
   width: 373px;
-  height: 536px;
+  /* height: 536px; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
 }
 /* -------- 中间地图位置 -------- */
 .main-layout-center {
@@ -67,7 +102,12 @@ main {
 /* ---------- 右侧 ---------- */
 .main-layout-right {
   width: 373px;
-  height: 536px;
+  /* height: 536px; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
 }
 
 /* ##################################################################### */
@@ -94,6 +134,10 @@ footer > .sub__project .sub__project--item {
   margin-right: 21px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+}
+footer > .sub__project .sub__project--item:last-child {
+  margin-right: 0px;
 }
 .sub__project--item .project--item-header {
   width: 100%;
@@ -105,8 +149,3 @@ footer > .sub__project .sub__project--item {
   flex: 1 0 auto;
   height: 106px;
 }
-/* --------- 统计分析 --------- */
-/* --------- 市容市貌 --------- */
-/* --------- 防违控违 --------- */
-/* --------- 电子台账 --------- */
-/* --------- 扬尘治理 --------- */
