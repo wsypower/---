@@ -1,7 +1,14 @@
+/* ##################################################################### */
+/* ############################### 布局css ############################### */
+/* ##################################################################### */
 html,
 body {
   width: 100%;
   height: 100%;
+  min-height: 768px;
+  min-width: 1334px;
+  background: url("../images/index-bc.png") no-repeat center;
+  background-size: cover;
 }
 .container {
   width: 100%;
@@ -9,21 +16,97 @@ body {
   display: flex;
   flex-direction: column;
 }
+/* ##################################################################### */
+/* ############################### header ############################## */
+/* ##################################################################### */
 header {
   height: 85px;
   width: 100%;
-  background-color: red;
   flex: none;
+  display: flex;
+  flex-direction: row;
+  background: url("../images/header-bc.png") no-repeat top center;
+  background-size: contain;
 }
+/* ##################################################################### */
+/* ################################ main ############################### */
+/* ##################################################################### */
 main {
   height: 537px;
   width: 100%;
   flex: 1 0 auto;
-  background-color: salmon;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+/* ====================================================== */
+/* ====================== main内容区域 ====================== */
+/* ====================================================== */
+.main__container {
+  height: 100%;
+  width: 1400px;
+  display: flex;
+  flex-direction: row;
+}
+/* ~~~~~~~~~~~~~ 适配1400分辨率以下 ~~~~~~~~~~~~~ */
+@media screen and (max-width: 1400px) {
+  .main__container {
+    width: 100%;
+  }
+}
+/* ---------- 左侧 ---------- */
+.main-layout-left {
+  width: 373px;
+  height: 536px;
+}
+/* -------- 中间地图位置 -------- */
+.main-layout-center {
+  height: 100%;
+  flex: auto;
+}
+/* ---------- 右侧 ---------- */
+.main-layout-right {
+  width: 373px;
+  height: 536px;
+}
+
+/* ##################################################################### */
+/* ################################# 底部 ################################ */
+/* ##################################################################### */
 footer {
   height: 146px;
   width: 100%;
-  background-color: silver;
   flex: 1 0 auto;
 }
+/* ====================================================== */
+/* ========================= 子项目 ======================== */
+/* ====================================================== */
+footer > .sub__project {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+/* ~~~~~~~~~~~~~~~ 子项目统一样式 ~~~~~~~~~~~~~~~ */
+footer > .sub__project .sub__project--item {
+  width: 217px;
+  min-height: 146px;
+  margin-right: 21px;
+  display: flex;
+  flex-direction: column;
+}
+.sub__project--item .project--item-header {
+  width: 100%;
+  height: 35px;
+  flex: none;
+}
+.sub__project--item .project--item-main {
+  width: 100%;
+  flex: 1 0 auto;
+  height: 106px;
+}
+/* --------- 统计分析 --------- */
+/* --------- 市容市貌 --------- */
+/* --------- 防违控违 --------- */
+/* --------- 电子台账 --------- */
+/* --------- 扬尘治理 --------- */
