@@ -5,42 +5,28 @@ require.config({
   paths: {
     jquery: "./lib/jquery-3.4.1.min",
     anime: "./lib/anime.min",
+    subAnima: "./sub-anima",
   },
 });
 
-require(["jquery", "anime"], function ($, anime) {
+require(["jquery", "anime", "subAnima"], function ($, anime, SubAnima) {
   $(function () {
-    var subAnimaMap = null;
-    function animation(ele) {
-      subAnimaMap = null;
-      var animaAction = anime({
-        // targets: ".state-tone path",
-        targets: ele,
-        translateY: -8,
-        delay: anime.stagger(60),
-        fill: "#50E0FB",
-        endDelay: 0,
-        direction: "alternate",
-        autoplay: false,
-        changeComplete: function (anim) {
-          anim.pause();
-        },
-      });
-      return animaAction;
-    }
-    $(".sub__project--item")
-      .on("mouseenter", function () {
-        var target = $(this).find(".state-tone path");
-        var targetAnima = $.map(target, function (item) {
-          return item;
-        });
-        var animaAction = animation(targetAnima);
-        subAnimaMap = animaAction;
-        animaAction.play();
-      })
-      .on("mouseleave", function () {
-        subAnimaMap.reverse();
-        subAnimaMap.play();
-      });
+    eachInit(".sub__project--item", function (item) {
+      new SubAnima(item);
+    });
   });
+
+  /**
+   * @description
+   * 遍历初始化元素
+   * @author wsy
+   * @date 2020-06-18  11:25:02
+   * @param {Object} ele your introduction
+   * @param {Object} callback your introduction
+   */
+  function eachInit(ele, callback) {
+    $(ele).each(function (index, item) {
+      callback(item);
+    });
+  }
 });
