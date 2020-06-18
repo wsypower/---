@@ -142,6 +142,15 @@ header .header-layout-left {
   background: url("../images/sub-item-bc.png") no-repeat top center;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sub__project .sub__project--item:hover {
+  transform: scale(1.1) translate(0%, -5%);
+  -webkit-transform: scale(1.1) translate(0%, -5%);
+  -moz-transform: scale(1.1) translate(0%, -5%);
+  -ms-transform: scale(1.1) translate(0%, -5%);
+  -o-transform: scale(1.1) translate(0%, -5%);
 }
 .sub__project--item .project--item-header {
   width: 100%;
@@ -171,8 +180,78 @@ header .header-layout-left {
 }
 .sub__project--item .project--item-main {
   width: 100%;
-  flex: auto;
+  height: 106px;
+  flex: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
+.sub__project--item .project--item-main .sub-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  /* background-color: red; */
+}
+.sub__project--item .project--item-main .sub-content img {
+  width: 100%;
+}
+.sub__project--item .project--item-main:hover {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+.sub__project--item .project--item-main:hover .content {
+  opacity: 0.4;
+}
+.sub__project--item .project--item-main .content {
+  width: 300px;
+  flex: auto;
+  position: relative;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 200;
+  border-radius: 50%;
+  height: 200px;
+  transform: translate(-50%, 50%);
+  border: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgb(80, 224, 251) 0,
+    transparent 70%
+  );
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-animation: imageRebound 0.7s ease !important;
+  animation: imageRebound 0.7s ease !important;
+  -moz-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  -o-transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 50%);
+}
+
+.sub__project--item .project--item-main .content::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  z-index: 100;
+  display: block;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 50%;
+  border: 2px solid rgb(116, 234, 255);
+  -webkit-animation: circle 1.5s ease infinite;
+  animation: circle 1.5s ease infinite;
+}
+
 /* ##################################################################### */
 /* ################################# 字体 ################################ */
 /* ##################################################################### */
@@ -184,4 +263,44 @@ header .header-layout-left {
 @font-face {
   font-family: big;
   src: url(../font/big.ttf);
+}
+/* ##################################################################### */
+/* ################################# 动画 ################################ */
+/* ##################################################################### */
+@keyframes imageRebound {
+  0% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    border-radius: 30%;
+    pointer-events: none;
+  }
+  40% {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    border-radius: 14px;
+    pointer-events: none;
+  }
+  70% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    border-radius: 18px;
+    pointer-events: none;
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-radius: 10px;
+    pointer-events: none;
+  }
+}
+@keyframes circle {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 230px;
+    height: 230px;
+    opacity: 0;
+  }
 }

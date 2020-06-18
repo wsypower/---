@@ -12,7 +12,7 @@ require.config({
 require(["jquery", "anime", "subAnima"], function ($, anime, SubAnima) {
   $(function () {
     eachInit(".sub__project--item", function (item) {
-      new SubAnima(item);
+      new SubAnima({ target: item });
     });
   });
 
