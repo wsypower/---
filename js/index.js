@@ -12,10 +12,16 @@ require.config({
 require(["jquery", "anime", "subAnima"], function ($, anime, SubAnima) {
   $(function () {
     eachInit(".sub__project--item", function (item) {
-      new SubAnima({ target: item });
+      new SubAnima({
+        target: item,
+        subAnimaDefault: {
+          headPath: ".state-tone path",
+          arrowCircle: ".anima__go--icon circle",
+          arrowPath: ".anima__go--icon path",
+        },
+      });
     });
   });
-
   /**
    * @description
    * 遍历初始化元素

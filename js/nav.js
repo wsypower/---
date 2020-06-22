@@ -11,7 +11,7 @@
 /* ********************************************************************************************************* */
 
 define("subAnima", ["anime", "jquery"], function (anime, $) {
-  function SubAnima({ target = target, subAnimaDefault = subAnimaDefault }) {
+  function NavAnima({ target = target, subAnimaDefault = subAnimaDefault }) {
     //目标元素
     this.target = target;
     this.subAnimaDefault = subAnimaDefault;
@@ -33,7 +33,7 @@ define("subAnima", ["anime", "jquery"], function (anime, $) {
      * @date 2020-06-18  12:17:42
      */
     init() {
-      this.animaAction(...this.iteration(this.subAnimaDefault));
+      // this.animaAction(...this.iteration(this.subAnimaDefault));
       this.bindMouseAnima();
     },
     // ─── # ─────────────────────────────
@@ -126,5 +126,5 @@ define("subAnima", ["anime", "jquery"], function (anime, $) {
         });
     },
   };
-  return SubAnima;
+  return NavAnima;
 });

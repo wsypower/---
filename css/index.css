@@ -111,7 +111,11 @@ header .header-layout-left {
   width: 310px;
   height: 222px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 /* ~~~~~~~~~~~~~~~~~ 左侧样式 ~~~~~~~~~~~~~~~~ */
 .project-left {
   background: url("../images/main-iten-bc.png") no-repeat;
@@ -192,20 +196,22 @@ header .header-layout-left {
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   /* background-color: red; */
 }
 .sub__project--item .project--item-main .sub-content img {
-  width: 100%;
+  /* width: 100%; */
 }
-.sub__project--item .project--item-main:hover {
+.sub__project--item .project--item-main:hover .sub-content {
   filter: blur(5px);
   -webkit-filter: blur(5px);
 }
 .sub__project--item .project--item-main:hover .content {
-  opacity: 0.4;
+  opacity: 0.35;
 }
 .sub__project--item .project--item-main .content {
+  z-index: 5;
   width: 300px;
   flex: auto;
   position: relative;
@@ -247,9 +253,24 @@ header .header-layout-left {
   transform: translate(-50%, -50%);
   top: 50%;
   border-radius: 50%;
-  border: 2px solid rgb(116, 234, 255);
+  border: 3px solid rgb(98, 232, 255);
   -webkit-animation: circle 1.5s ease infinite;
   animation: circle 1.5s ease infinite;
+}
+.sub__project--item .project--item-main .go__ahead-icon {
+  z-index: 10;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.anima__go--icon circle {
+  transform-origin: 50% 60%;
+  /* stroke-dasharray: 100%, 100%;
+  stroke-dashoffset: 100%;
+  fill: none; */
 }
 
 /* ##################################################################### */

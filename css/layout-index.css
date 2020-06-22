@@ -98,6 +98,51 @@ main {
 .main-layout-center {
   height: 100%;
   flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-layout-center-map {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/images/map.png") no-repeat center 44%;
+  background-size: 920px 760px;
+}
+.map__border {
+  stroke: #00ffff;
+  stroke-width: 5px;
+  fill: #00ffff;
+  transform: scale(1.03) translate(1px, 1px);
+  -webkit-transform: scale(1.03) translate(1px, 1px);
+  -moz-transform: scale(1.03) translate(1px, 1px);
+  -ms-transform: scale(1.03) translate(1px, 1px);
+  -o-transform: scale(1.03) translate(1px, 1px);
+}
+.main-layout-center-map svg .map__area path {
+  stroke: #00ffff;
+  stroke-width: 2px;
+  fill: #040d38;
+  cursor: pointer;
+  transition: scale() 0.5s;
+  -webkit-transition: scale() 0.5s;
+  -moz-transition: scale() 0.5s;
+  -ms-transition: scale() 0.5s;
+  -o-transition: scale() 0.5s;
+}
+.main-layout-center-map svg .map__area path:first-child {
+  transform: scale(1.01) translate(-4px, -4px);
+}
+.main-layout-center-map svg .map__area path:nth-child(2) {
+  transform: scale(1.01);
+}
+.main-layout-center-map svg .map__area path:nth-child(2) {
+  transform: scale(1.01);
+}
+.main-layout-center-map svg .map__area path:hover {
+  fill: rgb(31, 66, 238);
 }
 /* ---------- 右侧 ---------- */
 .main-layout-right {
